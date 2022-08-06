@@ -9,10 +9,11 @@ module.exports = function (api) {
 
   api.loadSource(async store => {
     const package = JSON.parse(fs.readFileSync('./package.json'));
-    store.addMetadata('version', package.version);
+    store.addMetaData('version', package.version);
   })
 
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
   })
 }
+
